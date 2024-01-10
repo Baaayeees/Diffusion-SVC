@@ -40,7 +40,7 @@ G_SVC_MODEL = DiffusionSVC(device=G_DEVICE)
 
 G_SVC_MODEL.load_model(
     model_path=G_MODEL_PATH,
-    f0_model='rmvpe',
+    f0_model='fcpe',
     f0_max=G_F0_MAX,
     f0_min=G_F0_MIN,
     other_vocoder_dict=G_OTHER_VOCODER_DICT
