@@ -157,7 +157,7 @@ def convert_audio(
         infer_speedup=infer_speedup,
         method=method,
         k_step=k_step,
-        use_tqdm=True,
+        use_tqdm=False,
     )
 
     audio = out_sr, out_wav
