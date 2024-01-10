@@ -294,7 +294,7 @@ class F0_Extractor:
 
         elif self.f0_extractor == "fcpe":
             if device is None:
-                device = 'cuda' if torch.cuda.is_available() else 'cpu'
+                device = 'cpu' if torch.cuda.is_available() else 'cpu'
             _JUMP_SAFE_PAD = False
             if self.transformer_f0 is None:
                 #from torchfcpe import spawn_infer_model_from_pt
