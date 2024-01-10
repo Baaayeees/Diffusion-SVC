@@ -5,6 +5,7 @@ import torch
 from tools.infer_tools import DiffusionSVC
 from openxlab.model import download
 import openxlab
+import numpy as np
 import os
 
 ak = os.getenv("OPENXLAB_AK")
@@ -118,7 +119,7 @@ def convert_audio(
     torch.cuda.empty_cache()
 
     # 处理int场合，如果数组是int
-    if audio.dtype == "int16":
+    if audio.dtype == (np.int16):
         audio = audio.astype("float32")
         audio /= 32768.0
 
