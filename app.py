@@ -7,8 +7,8 @@ from openxlab.model import download
 import openxlab
 import os
 
-ak = os.getenv(OPENXLAB_AK)
-sk = os.getenv(OPENXLAB_SK)
+ak = os.getenv("OPENXLAB_AK")
+sk = os.getenv("OPENXLAB_SK")
 
 openxlab.login(ak=ak, sk=sk)
 
