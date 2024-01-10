@@ -23,7 +23,7 @@ transformers
 wave
 pysimplegui
 sounddevice
-gradio
+gradio>=4.13.0
 faiss-cpu
 vector-quantize-pytorch
 wget
