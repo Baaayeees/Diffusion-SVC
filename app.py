@@ -126,7 +126,7 @@ def convert_audio(
         audio = librosa.to_mono(audio)
 
     if int(sr) != 16000:
-        audio = librosa.resample(audio, sr, 16000)
+        audio = librosa.resample(audio, orig_sr=sr, target_sr=16000)
         sr = 16000
 
     global G_SPKID_SPKNAME_DICT
