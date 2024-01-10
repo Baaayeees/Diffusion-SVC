@@ -163,7 +163,8 @@ def convert_audio(
         k_step=k_step,
         use_tqdm=False,
     )
-    out_wav = (out_wav * 32767).astype(np.int16)
+    if out_wav.dtype != (np.int16):
+        out_wav = (out_wav * 32767).astype(np.int16)
 
     audio = out_sr, out_wav
 
