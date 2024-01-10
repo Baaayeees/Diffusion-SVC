@@ -125,6 +125,10 @@ def convert_audio(
     if len(audio.shape) > 1:
         audio = librosa.to_mono(audio)
 
+    if int(sr) != 16000:
+        audio = librosa.resample(audio, sr, 16000)
+        sr = 16000
+
     global G_SPKID_SPKNAME_DICT
     spkid_str = G_SPKID_SPKNAME_DICT[str(spkid_str)]
     spkid = int(spkid_str)
