@@ -115,6 +115,7 @@ def convert_audio(
 ):
     sr = audio[0]
     audio = audio[1]
+    torch.cuda.empty_cache()
 
     # 处理int场合，如果数组是int
     if audio.dtype == "int16":
